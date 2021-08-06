@@ -1619,7 +1619,7 @@ const Component = Backbone.Model.extend(Styleable).extend(
         if (typeof scr == 'function') {
           var scrStr = scr.toString().trim();
           scrStr = scrStr
-            .replace(/^function[\s\w]*\(\)\s?\{/, '')
+            .replace(/^(function|script)[\s\w]*\([^(^)]*\)\s?\{/, '')
             .replace(/\}$/, '');
           scr = scrStr.trim();
         }
